@@ -22,9 +22,10 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'Mabdi23 dockerhub'
+        containerRegistry: 'Mabdi23 - dockerhub'
         repository: 'mabdi23/weatherapi'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         tags: |
           $(tag)
+
