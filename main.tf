@@ -3,6 +3,15 @@ provider "azurerm" {
     features {}
 }
 
+terraform {
+    backend "azurerm" {
+      resource_group_name = "abdi-test-2"
+      storage_account_name = "abditeststorage82"
+      container_name = "tfstate"
+      key = "terraform.tfstate"
+    }
+}
+
 resource "azurerm_resource_group" "TF_test" {
     name = "tfmainabdi-rg"
     location = "Canada Central"
